@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const Index: React.FC = () => {
-  return (
-    <div className="App">
-      test
-    </div>
-  );
-}
+import HeaderContainer from './containers/Header';
+import MainContainer from './containers/Main';
+
+const Index: React.FC = () => (
+  <Fragment>
+    <HeaderContainer userInfo={{}} />
+    <MainContainer />
+  </Fragment>
+);
 
 export default Index;

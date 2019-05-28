@@ -1,5 +1,8 @@
 @import "config/index";
 
 body {
+  overflow-x: hidden;
   font-family: 'RalewayR', sans-serif;
 }
+
+@import "pages/index";

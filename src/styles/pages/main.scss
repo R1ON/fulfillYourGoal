@@ -1,0 +1,15 @@
+.main {
+  width: 100vw;
+  height: 300px;
+
+  padding-top: 50px;
+
+  background: $gray-35;
+
+  &__title {
+    padding: 0 50px;
+
+    font-family: 'RalewayM', sans-serif;
+    font-size: 30px;
+  }
+}

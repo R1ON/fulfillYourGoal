@@ -1,0 +1,65 @@
+.header {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  height: 70px;
+  width: 100vw;
+
+  background: $purple;
+
+  &__separator {
+    position: absolute;
+    top: 55px;
+
+    width: 101vw;
+    height: 40px;
+
+    background: $purple;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+    transform: rotate(1deg);
+
+    &_dark {
+      background: $purple-dark;
+
+      clip-path: polygon(0 70%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 0 50px;
+  margin-top: 15px;
+
+  color: $white;
+
+  z-index: 1;
+
+  &__logo {
+    line-height: 0;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.user-info {
+  &__name {
+    margin-right: 15px;
+  }
+
+  &__avatar img {
+    width: 50px;
+  }
+}
