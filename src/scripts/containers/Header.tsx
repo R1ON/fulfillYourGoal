@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
 
+import * as R from 'ramda';
+
 import LogoIcon from '../../images/icons/logo.svg';
 import ManIcon from '../../images/icons/man.svg';
 
 interface IProps {
-  userInfo: {
-    name?: string,
-  }
+  userInfo?: {
+    name: string,
+  } | null
 }
 
 interface IState {}
@@ -15,6 +17,8 @@ class HeaderContainer extends PureComponent <IProps, IState> {
   render() {
     const { userInfo } = this.props;
 
+    const userName: string = R.propOr('No name', 'name', userInfo);
+
     return (
       <header className="header">
         <div className="header-content">
@@ -22,9 +26,9 @@ class HeaderContainer extends PureComponent <IProps, IState> {
             <img src={LogoIcon} alt="Site logo" aria-hidden />
           </div>
           <div className="header-content__user-info user-info">
-            <div className="user-info__name">{userInfo.name || 'No name'}</div>
+            <div className="user-info__name">{userName}</div>
             <div className="user-info__avatar">
-              <img src={ManIcon} alt={userInfo.name || 'No name'} />
+              <img src={ManIcon} alt={userName} />
             </div>
           </div>
         </div>

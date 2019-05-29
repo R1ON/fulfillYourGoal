@@ -3,9 +3,11 @@ import React, { Fragment } from 'react';
 import HeaderContainer from './containers/Header';
 import MainContainer from './containers/Main';
 
+const userInfo = null;
+
 const Index: React.FC = () => (
   <Fragment>
-    <HeaderContainer userInfo={{}} />
+    <HeaderContainer userInfo={userInfo} />
     <MainContainer />
   </Fragment>
 );
