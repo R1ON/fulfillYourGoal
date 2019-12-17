@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, ReactNode } from 'react';
 
 import * as R from 'ramda';
 
@@ -14,7 +14,7 @@ interface IProps {
 interface IState {}
 
 class HeaderContainer extends PureComponent <IProps, IState> {
-  render() {
+  public render(): ReactNode {
     const { userInfo } = this.props;
 
     const userName: string = R.propOr('No name', 'name', userInfo);

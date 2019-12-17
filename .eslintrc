@@ -32,7 +32,8 @@
     "import/extensions": { "ts": "never", "tsx": "never" },
     "no-use-before-define": "warn",
     "no-param-reassign": "warn",
-    "no-restricted-globals": ["error", "event"]
+    "no-restricted-globals": ["error", "event"],
+    "import/no-unresolved": "off"
   },
   "settings": {
     "import/resolver": {
