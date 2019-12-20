@@ -1,4 +1,5 @@
 import React, { PureComponent, ReactNode } from 'react';
+import axios from 'axios';
 
 import { connect } from 'react-redux';
 
@@ -22,6 +23,10 @@ class MainContainer extends PureComponent <IProps, IState> {
     showModal: false,
     goals: [],
   };
+
+  componentDidMount(): void {
+    axios.get('/api');
+  }
 
   public addNewGoal = () => {
     const { goals } = this.state;
@@ -52,7 +57,7 @@ class MainContainer extends PureComponent <IProps, IState> {
               <div>+</div>
             </button>
           </div>
-          {/*<div className="tiles__completed-tasks">tasks</div>*/}
+          {/* <div className="tiles__completed-tasks">tasks</div> */}
         </div>
       </main>
     );

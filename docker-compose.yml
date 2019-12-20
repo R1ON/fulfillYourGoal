@@ -1,12 +1,18 @@
 version: "3.7"
 services:
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - version=666
-    image: frontend:0.0.3
-    container_name: frontend
+#  frontend:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#      args:
+#        - version=666
+#    image: frontend:0.0.3
+#    container_name: frontend
+#    ports:
+#      - 5005:3000
+  nginx:
+    build: .
+    image: nginx:0.0.1
+    container_name: nginx
     ports:
-      - 5005:3000
+      - 3000:80
